@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Baloo_Bhai_2, Inter } from "next/font/google";
 import "../styles/globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { ThemeProvider } from "@/components/theme-provider"
+import Navbar from "@/components/Navbar";
+const ballo = Baloo_Bhai_2({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Umer Aziz - Web Developer",
@@ -16,7 +17,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={ballo.className}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar/>
+            {children}
+          </ThemeProvider>
+        </body>
     </html>
   );
 }

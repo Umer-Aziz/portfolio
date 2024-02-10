@@ -73,7 +73,10 @@ html::-webkit-scrollbar-thumb{
   }
 
   .padd-x{
-    @apply px-4 sm:px-6 xl:px-8;
+    @apply px-4 sm:px-6 xl:px-0;
+  }
+  .max-width {
+    @apply max-w-[1200px] mx-auto;
   }
   nav ul {
     @apply hidden md:flex items-center gap-8 flex-row;

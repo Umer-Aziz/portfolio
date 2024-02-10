@@ -50,11 +50,21 @@ const Navbar = () => {
     </ul>
     <div className='flex items-center gap-2'>
         <ModeToggle/>
-        <div className='relative'>
-             <Button variant={"outline"} size={"icon"} className='flex flex-col gap-y-1'>
-              <div className='w-[18px] h-1 bg-primary'></div>
-              <div className='w-[18px] h-1 bg-primary'></div>
-              <div className='w-[18px] h-1 bg-primary'></div>
+        <div className='relative md:hidden'>
+             <Button onClick={toggleMenu} variant={"outline"} size={"icon"} className='relative overflow-hidden flex items-center justify-center flex-col gap-y-1'>
+              <motion.div 
+              animate={ isOpen ?"":{rotate:45,width:24}}
+              transition={{duration:0.3}}
+              className={`w-[18px] h-[3px] bg-primary ${isOpen ? "" : "absolute top-1/2"}`}></motion.div>
+  
+              <motion.div 
+              animate={ isOpen ?"":{rotate:-45,width:24}}
+              transition={{duration:0.3}}
+              className={`w-[18px] h-[3px] bg-primary ${isOpen ? "" : "absolute top-1/2"}`}></motion.div>
+              <motion.div
+              animate={ isOpen ?{scale:[0,1],opacity:1}:{opacity:0}}
+              transition={{duration:0.3}}
+               className={`w-[18px] h-[3px] bg-primary`}></motion.div>
              </Button>
         </div>
     </div>

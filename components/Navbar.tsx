@@ -34,7 +34,7 @@ const Navbar = () => {
   ]
   return (
    <>
-   <nav className=''>
+   <nav className='sticky top-0 z-30 bg-background border-b'>
     <div className='relative padd-x py-4 flex justify-between items-center'>
     <div className='text-2xl font-bold'>
      <span className="text-primary">Umer</span>
@@ -55,10 +55,10 @@ const Navbar = () => {
       {navItems.map((list,index)=>{
         return(
           <motion.div
-          whileInView={{opacity:[0,1],translateX:[-50,0],translateY:[-50,0]}}
+          whileInView={{opacity:[0,1],translateX:[-50,0],scale:[0.5,1.1,1]}}
           transition={{duration:0.3,delay:0.1 + index * 0.1}}
            key={index}>
-          <Link href={list.link}><li className={`${path === list.link && "active"}`}>{list.title}</li></Link>
+          <Link onClick={()=>{setIsOpen(true)}} href={list.link}><li className={`${path === list.link && "active"}`}>{list.title}</li></Link>
           </motion.div>
         )
       })}

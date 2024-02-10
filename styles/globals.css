@@ -75,11 +75,11 @@ html::-webkit-scrollbar-thumb{
   .padd-x{
     @apply px-4 sm:px-6 xl:px-8;
   }
-nav {
-  @apply relative;
-}
   nav ul {
-    @apply absolute hidden md:relative md:flex md:items-center gap-8;
+    @apply hidden md:flex items-center gap-8 flex-row;
+  }
+  nav .mobile {
+    @apply absolute top-0 -left-full min-h-screen w-4/6 bg-secondary flex flex-col items-center gap-8 pt-20 md:hidden;
   }
   nav ul li {
     @apply font-medium relative capitalize;
@@ -94,9 +94,9 @@ nav {
   nav ul li:hover::after {
     @apply scale-100;
   }
-  nav ul li.active::after {
+  /* nav ul li.active::after {
     @apply scale-100;
-  }
+  } */
   
   nav ul li:hover {
     @apply text-primary duration-150;

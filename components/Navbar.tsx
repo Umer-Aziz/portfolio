@@ -8,7 +8,7 @@ import { Button } from './ui/button'
 const Navbar = () => {
   const path = usePathname();
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const toggleMenu = () => setIsOpen((prev) => !prev);
   const navItems = [
     {
@@ -34,20 +34,35 @@ const Navbar = () => {
   ]
   return (
    <>
-   <nav>
-    <div className='padd-x py-4 flex justify-between items-center'>
+   <nav className=''>
+    <div className='relative padd-x py-4 flex justify-between items-center'>
     <div className='text-2xl font-bold'>
      <span className="text-primary">Umer</span>
      <span className="text-yellow-400">Aziz</span>
     </div>
     <div className='flex items-center gap-16'>
-    <ul>
+    <ul className='desktop'>
       {navItems.map((list,index)=>{
         return(
           <Link key={index} href={list.link}><li className={`${path === list.link && "active"}`}>{list.title}</li></Link>
         )
       })}
     </ul>
+     <motion.ul
+    animate={isOpen ? "":{left:0}}
+    transition={{duration:0.3}}
+     className='mobile'>
+      {navItems.map((list,index)=>{
+        return(
+          <motion.div
+          whileInView={{opacity:[0,1],translateX:[-50,0],translateY:[-50,0]}}
+          transition={{duration:0.3,delay:0.1 + index * 0.1}}
+           key={index}>
+          <Link href={list.link}><li className={`${path === list.link && "active"}`}>{list.title}</li></Link>
+          </motion.div>
+        )
+      })}
+    </motion.ul>
     <div className='flex items-center gap-2'>
         <ModeToggle/>
         <div className='relative md:hidden'>
@@ -62,7 +77,7 @@ const Navbar = () => {
               transition={{duration:0.3}}
               className={`w-[18px] h-[3px] bg-primary ${isOpen ? "" : "absolute top-1/2"}`}></motion.div>
               <motion.div
-              animate={ isOpen ?{scale:[0,1],opacity:1}:{opacity:0}}
+              animate={ isOpen ?{opacity:1}:{opacity:0}}
               transition={{duration:0.3}}
                className={`w-[18px] h-[3px] bg-primary`}></motion.div>
              </Button>

@@ -79,13 +79,13 @@ html::-webkit-scrollbar-thumb{
     @apply max-w-[1200px] mx-auto;
   }
   nav ul {
-    @apply hidden md:flex items-center gap-8 flex-row;
+    @apply hidden md:flex items-center gap-8 md:gap-6 lg:gap-8 flex-row;
   }
   nav .mobile {
     @apply absolute top-0 -left-full min-h-screen w-4/6 bg-secondary flex flex-col items-center gap-8 pt-20 md:hidden;
   }
   nav ul li {
-    @apply font-medium relative capitalize;
+    @apply lg:font-medium relative capitalize;
   }
   
   nav ul li::after {

@@ -41,6 +41,7 @@ const Navbar = () => {
      <span className="text-yellow-400">Aziz</span>
     </div>
     <div className='flex items-center gap-12 lg:gap-16'>
+      
     <ul className='desktop'>
       {navItems.map((list,index)=>{
         return(

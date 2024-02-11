@@ -1,4 +1,6 @@
+"use client"
 import { Button } from "@/components/ui/button";
+import Typewriter from "typewriter-effect";
 import { FiSend , FiDownload } from "react-icons/fi";
 import { FaSquareXTwitter ,FaSquareFacebook , FaGithub , FaLinkedin , FaStackOverflow } from "react-icons/fa6";
 export default function Home() {
@@ -30,7 +32,14 @@ export default function Home() {
       <div className="max-width padd-x">
       <section className="min-h-[80vh] grid lg:grid-cols-2 gap-8">
         <div className="flex flex-col py-12 md:py-24">
-        <h2 className="text-primary text-lg font-medium uppercase tracking-wider">Web Developer</h2>
+        <h2 className="text-primary text-lg font-medium uppercase tracking-wider">
+        <Typewriter
+  options={{
+    strings: ['Web Developer', 'Software Engineer'],
+    autoStart: true,
+    loop: true,
+  }}
+/></h2>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide">Hello,My Name is <br /><span className="text-primary">Umer Aziz.</span></h1>
         <p className="md:max-w-sm lg:max-w-md mt-2 tracking-wide">
         I craft interactive and user-friendly experiences on the web, transforming ideas into functional and visually appealing websites and applications.

@@ -4,9 +4,12 @@ import Typewriter from "typewriter-effect";
 import { FiSend , FiDownload } from "react-icons/fi";
 import Spline from "@splinetool/react-spline";
 import { FaSquareXTwitter ,FaSquareFacebook , FaGithub , FaLinkedin , FaStackOverflow } from "react-icons/fa6";
+import AnimatedText from "./AnimatedText";
 
 
 const Hero = () => {
+
+
     const socialIcons = [
         {
           path:"/",
@@ -41,7 +44,7 @@ const Hero = () => {
     loop: true,
   }}
 /></h2>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide">Hello,My Name is <br /><span className="text-primary">Umer Aziz.</span></h1>
+        <AnimatedText/>
         <p className="md:max-w-sm lg:max-w-md mt-2 tracking-wide">
         I craft interactive and user-friendly experiences on the web, transforming ideas into functional and visually appealing websites and applications.
           </p>

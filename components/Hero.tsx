@@ -38,7 +38,7 @@ const Hero = () => {
   return (
     <>
      <section className="max-width padd-x padd-y grid md:grid-cols-2 gap-8">
-        <div className="flex flex-col">
+        <div className="flex flex-col items-center md:items-start">
         <h2 className="text-primary text-lg font-medium uppercase tracking-wider">
         <Typewriter
   options={{
@@ -50,7 +50,7 @@ const Hero = () => {
         <AnimatedText/>
         <motion.p whileInView={{opacity:[0,1]}}
         transition={{duration:0.7}}
-        className="md:max-w-sm lg:max-w-md mt-2 tracking-wide opacity-0">
+        className="md:max-w-sm lg:max-w-md mt-2 tracking-wide opacity-0 text-center md:text-left">
            <Each of={description} render={(letter,index)=>
           <motion.span
           whileInView={{ transform:[
@@ -87,7 +87,7 @@ const Hero = () => {
              </motion.div>
         </div>
         {/* Social Share  */}
-        <div className="mt-6 lg:mt-8 flex gap-4 items-center text-xl md:text-2xl">
+        <div className="mt-8 flex gap-4 items-center text-xl md:text-2xl">
           <Each of={socialIcons} render={(item,index)=>
           <motion.a 
           animate={{scale:[0.5,1.5,1]}}
@@ -97,7 +97,7 @@ const Hero = () => {
           }/>    
         </div>
         </div>
-        <div className="w-full  flex justify-center">
+        <div className="w-full flex justify-center">
       {/* Render the Spline Viewer component */}
      <div>
       <Spline

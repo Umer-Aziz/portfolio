@@ -9,7 +9,7 @@ const AnimatedText = () => {
   return (
     <>
    
-       <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide">
+       <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide text-center md:text-left">
         <Each of={Sentence} render={(letter,index) =>
         <motion.span
         whileHover={{ transform:[

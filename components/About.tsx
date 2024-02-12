@@ -19,11 +19,14 @@ const About = () => {
         <MdRoundaboutRight className='text-2xl lg:text-3xl text-primary'/>
         <h2 className='text-center text-3xl lg:text-4xl text-primary font-medium'>About me</h2>
         </div>
-        <div className="pt-12 lg:pt-16 grid md:grid-cols-2 gap-16">
-        <div>
+
+        <div className="pt-12 lg:pt-16 flex flex-col-reverse  md:flex-row md:justify-between gap-16">
+            
+        <div className='w-full md:w-2/4'>
             <img className='w-11/12 max-h-96 drop-shadow-lg' src={"/img/about.svg"} alt='about'/>
         </div>
-        <div>
+
+        <div className='w-full md:w-2/4'>
             <h3 className='text-2xl xl:text-3xl uppercase font-medium'>
                 <Each of={text} render={(letter,index)=>
                  <motion.span

@@ -35,8 +35,9 @@ const AnimatedText = () => {
     },
     opacity:[0,1]
  }}
+ viewport={{once:true}}
        
-         className='inline-block'>{letter === " " ? "\u00A0" : letter}</motion.span> 
+         className='inline-block opacity-0'>{letter === " " ? "\u00A0" : letter}</motion.span> 
         }/>
         <br />
         <Each of={text} render={(letter,index)=>
@@ -60,12 +61,11 @@ const AnimatedText = () => {
               "scale3d(.9,1.05,1)",
               "scale3d(1,1,1)",
           ] ,transition:{
-              duration:1 , delay: 2 + index * 0.1
+              duration:1 , delay: 1 + index * 0.1
           },
           opacity:[0,1]
        }}
-         
-           className='inline-block text-primary'>{letter === " " ? "\u00A0" : letter}</motion.span> 
+           className='inline-block text-primary opacity-0'>{letter === " " ? "\u00A0" : letter}</motion.span> 
         }/>
             </h1>
     </>

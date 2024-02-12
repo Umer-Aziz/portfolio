@@ -31,7 +31,7 @@ const AnimatedText = () => {
         "scale3d(.9,1.05,1)",
         "scale3d(1,1,1)",
     ] ,transition:{
-        duration:1 , delay: 1 + index * 0.1
+        duration:1 , delay: 0.7 + index * 0.1
     },
     opacity:[0,1]
  }}

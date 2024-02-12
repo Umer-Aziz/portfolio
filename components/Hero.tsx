@@ -92,7 +92,7 @@ const Hero = () => {
           <motion.a 
           animate={{scale:[0.5,1.5,1]}}
           whileInView={{opacity:[0,1]}}
-          transition={{duration:1,delay:1 + index * 0.2}}
+          transition={{duration:1,delay:0.7 + index * 0.2}}
           href={item.path} className="opacity-0"><item.icon className="hover:text-primary hover:scale-110 duration-200"/></motion.a>
           }/>    
         </div>

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion' ;
 import { Button } from './ui/button'
+import { Each } from './Each'
 const Navbar = () => {
   const path = usePathname();
 
@@ -43,26 +44,23 @@ const Navbar = () => {
     <div className='flex items-center gap-12 lg:gap-16'>
       
     <ul className='desktop'>
-      {navItems.map((list,index)=>{
-        return(
-          <Link key={index} href={list.link}><li className={`${path === list.link && "active"}`}>{list.title}</li></Link>
-        )
-      })}
+      <Each of={navItems} render={(list,index)=>
+      <Link href={list.link}><li className={`${path === list.link && "active"}`}>{list.title}</li></Link>
+      }/>
+     
     </ul>
      <motion.ul
     animate={isOpen ? "":{left:0}}
     transition={{duration:0.3}}
-     className='mobile'>
-      {navItems.map((list,index)=>{
-        return(
-          <motion.div
-          whileInView={{opacity:[0,1],translateX:[-50,0],scale:[0.5,1.1,1]}}
-          transition={{duration:0.3,delay:0.1 + index * 0.1}}
-           key={index}>
-          <Link onClick={()=>{setIsOpen(true)}} href={list.link}><li className={`${path === list.link && "active"}`}>{list.title}</li></Link>
-          </motion.div>
-        )
-      })}
+     className='mobile z-50'>
+      <Each of={navItems} render={(list,index)=>
+    <motion.div
+    whileInView={{opacity:[0,1],translateX:[-50,0],scale:[0.5,1.1,1]}}
+    transition={{duration:0.3,delay:0.1 + index * 0.1}}>
+    <Link onClick={()=>{setIsOpen(true)}} href={list.link}><li className={`${path === list.link && "active"}`}>{list.title}</li></Link>
+    </motion.div>
+  }/>
+    
     </motion.ul>
     <div className='flex items-center gap-2'>
         <ModeToggle/>

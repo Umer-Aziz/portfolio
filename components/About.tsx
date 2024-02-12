@@ -1,12 +1,20 @@
+"use client"
 import React from 'react';
+import { motion } from "framer-motion";
 import { MdRoundaboutRight , MdOutlineMailOutline, MdOutlineHome } from "react-icons/md";
 import { FaRegUser , FaWhatsapp } from "react-icons/fa6";
 import { PiStudent } from "react-icons/pi";
 import { IoLanguage } from "react-icons/io5";
+import { Each } from './Each';
 const About = () => {
+    let text = "I BUILD INNOVATIVE THINGS FOR THE WEB".split("");
   return (
     <>
-    <section id='about' className='max-width padd-x padd-y'>
+    <motion.section
+      whileInView={{opacity:[0,1]}}
+      transition={{duration:2}}
+    id='about' className='max-width padd-x padd-y'>
+      
         <div className='flex items-center justify-center gap-2'>
         <MdRoundaboutRight className='text-2xl lg:text-3xl text-primary'/>
         <h2 className='text-center text-3xl lg:text-4xl text-primary font-medium'>About me</h2>
@@ -16,7 +24,26 @@ const About = () => {
             <img className='w-11/12 max-h-96' src={"/img/about.svg"} alt='about'/>
         </div>
         <div>
-            <h3 className='text-2xl xl:text-3xl uppercase font-medium'>I BUILD INNOVATIVE THINGS FOR THE WEB</h3>
+            <h3 className='text-2xl xl:text-3xl uppercase font-medium'>
+                <Each of={text} render={(letter,index)=>
+                 <motion.span
+              whileInView={{ transform:[
+                 "scale3d(1,1,1)",
+                 "scale3d(1.4,.55,1)",
+                 "scale3d(1.75,1.25,1)",
+                 "scale3d(1.25,.85,1)",
+                 "scale3d(.9,1.05,1)",
+                 "scale3d(1,1,1)",
+             ] ,transition:{
+                 duration:1 , delay: index * 0.02
+             },
+             opacity:[0,1]
+          }}
+          viewport={{once:true}}
+                
+                  className='inline-block opacity-0'>{letter === " " ? "\u00A0" : letter}</motion.span> 
+                }/>
+            </h3>
             <p className='mt-2 xl:mt-4 tracking-wide'>Explore my skills and projects, where technology meets creativity in perfect harmony, crafting innovative solutions for tomorrow's challenges.</p>
             <div className='mt-6 xl:mt-8 grid gap-3 md:gap-4'>
                 <div className='grid gap-3 lg:grid-cols-2'>
@@ -55,7 +82,8 @@ const About = () => {
                 </div>
         </div>
         </div>
-    </section>
+
+    </motion.section>
     </>
   )
 }

@@ -12,7 +12,7 @@ const About = () => {
     <>
     <motion.section
       whileInView={{opacity:[0,1]}}
-      transition={{duration:2}}
+      transition={{duration:1}}
     id='about' className='max-width padd-x padd-y'>
       
         <div className='flex items-center justify-center gap-2'>
@@ -21,7 +21,7 @@ const About = () => {
         </div>
         <div className="pt-12 lg:pt-16 grid md:grid-cols-2 gap-16">
         <div>
-            <img className='w-11/12 max-h-96' src={"/img/about.svg"} alt='about'/>
+            <img className='w-11/12 max-h-96 drop-shadow-lg' src={"/img/about.svg"} alt='about'/>
         </div>
         <div>
             <h3 className='text-2xl xl:text-3xl uppercase font-medium'>

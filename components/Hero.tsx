@@ -37,7 +37,7 @@ const Hero = () => {
       ]
   return (
     <>
-     <section className="max-width padd-x padd-y min-h-[80vh] grid md:grid-cols-2 gap-8">
+     <section className="max-width padd-x padd-y grid md:grid-cols-2 gap-8">
         <div className="flex flex-col">
         <h2 className="text-primary text-lg font-medium uppercase tracking-wider">
         <Typewriter

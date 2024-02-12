@@ -51,6 +51,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html::-webkit-scrollbar{
   @apply w-2;
 }
@@ -69,14 +73,13 @@ html::-webkit-scrollbar-thumb{
   }
   body {
     /* #212529  */
-    @apply bg-background text-foreground min-h-[100rem] overflow-x-hidden;
+    @apply bg-background text-foreground min-h-[200rem] overflow-x-hidden;
   }
-
   .padd-x{
     @apply px-4 sm:px-6 xl:px-0;
   }
   .padd-y{
-    @apply py-12 md:py-16 lg:py-20 xl:py-24;
+    @apply py-12 lg:pt-16 xl:py-20;
   }
   .max-width {
     @apply max-w-[1200px] mx-auto;

@@ -21,12 +21,12 @@ const Navbar = () => {
       title:"About"
     },
     {
-      link:"/portfolio",
-      title:"Portfolio"
+      link:"/#services",
+      title:"Services"
     },
     {
-      link:"/services",
-      title:"Services"
+      link:"/portfolio",
+      title:"Portfolio"
     },
     {
       link:"/contact",

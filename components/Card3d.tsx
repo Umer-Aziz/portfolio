@@ -1,10 +1,9 @@
-import React, { useRef, useState, MouseEvent } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { Each } from "./Each";
 import { FaLaptopCode } from "react-icons/fa6";
 import { GrDocumentPerformance } from "react-icons/gr";
-
 const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
 
@@ -15,6 +14,7 @@ type Service = {
 };
 
 const Card3d: React.FC = () => {
+  
   const Services: Service[] = [
     {
       Icon: MdOutlineDesignServices,
@@ -85,6 +85,8 @@ const Card3d: React.FC = () => {
       style={{
         transformStyle: "preserve-3d"
       }}
+      whileInView={{ opacity:[0,1],translateX:[-50,0],translateY:[-50,0],transition:{duration:0.5,delay:index * 0.2}}}
+    
       className="cursor-grab relative h-96 w-full rounded-xl bg-gradient-to-br from-primary dark:to-secondary to-gray-800"
     >
       <div

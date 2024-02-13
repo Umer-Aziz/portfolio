@@ -116,7 +116,3 @@ html::-webkit-scrollbar-thumb{
   }
   
 }
-
-.cursor {
-  cursor: url('/img/click.png'), auto;
-}

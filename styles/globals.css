@@ -55,8 +55,15 @@
   height: 100%;
 }
 
-
-
+.swiper-pagination{
+    bottom: 0px !important;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+  @apply dark:!bg-primary !bg-primary;
+}
+.swiper-pagination-bullet {
+  @apply dark:!bg-gray-100  dark:!opacity-100;
+}
 .swiper-slide img {
   display: block;
   width: 100%;

@@ -12,7 +12,8 @@ const Projects = () => {
       transition={{duration:1}}
        className='max-width padd-x padd-y'>
         <div className='grid md:grid-cols-2'>
-        <div className='flex flex-col max-w-96 gap-3 md:gap-4'>
+
+        <div className='flex flex-col justify-center max-w-96 gap-3 md:gap-4'>
         <div className='flex items-center gap-2'>
         <GrProjects className='text-2xl lg:text-3xl text-primary'/>
         <h2 className='text-center text-3xl lg:text-4xl text-primary font-medium'>Latest Projects</h2>
@@ -22,7 +23,8 @@ const Projects = () => {
            <Button className='mt-3 md:mt-4'>All Projects</Button>
           </div>
         </div>
-        <div className=''>
+
+        <div className='rounded-md md:rounded-lg'>
           <Slider/>
         </div>
         </div>

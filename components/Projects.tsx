@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { GrProjects } from "react-icons/gr";
 import { Button } from './ui/button';
+import Slider from './Slider';
 const Projects = () => {
   return (
     <>
@@ -21,7 +22,9 @@ const Projects = () => {
            <Button className='mt-3 md:mt-4'>All Projects</Button>
           </div>
         </div>
-        <div></div>
+        <div className=''>
+          <Slider/>
+        </div>
         </div>
     </motion.section>
     </>

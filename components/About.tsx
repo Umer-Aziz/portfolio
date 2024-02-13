@@ -41,9 +41,7 @@ const About = () => {
                  duration:1 , delay: index * 0.02
              },
              opacity:[0,1]
-          }}
-          viewport={{once:true}}
-                
+          }}                
                   className='inline-block opacity-0'>{letter === " " ? "\u00A0" : letter}</motion.span> 
                 }/>
             </h3>

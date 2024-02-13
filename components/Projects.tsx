@@ -11,15 +11,15 @@ const Projects = () => {
       whileInView={{opacity:[0,1]}}
       transition={{duration:1}}
        className='max-width padd-x padd-y'>
-        <div className='grid md:grid-cols-2'>
+        <div className='flex flex-col gap-12 xl:gap-0 xl:grid xl:grid-cols-2'>
 
-        <div className='flex flex-col justify-center max-w-96 gap-3 md:gap-4'>
+        <div className='flex flex-col justify-center items-center xl:items-start max-w-96 mx-auto xl:mx-0 gap-3 md:gap-4'>
         <div className='flex items-center gap-2'>
         <GrProjects className='text-2xl lg:text-3xl text-primary'/>
         <h2 className='text-center text-3xl lg:text-4xl text-primary font-medium'>Latest Projects</h2>
         </div>
-          <div>
-          <p>Dive into My showcase of captivating projects, crafted with creativity and precision.</p>
+          <div className='flex flex-col items-center xl:items-start'>
+          <p className='text-center xl:text-left'>Dive into My showcase of captivating projects, crafted with creativity and precision.</p>
            <Button className='mt-3 md:mt-4'>All Projects</Button>
           </div>
         </div>

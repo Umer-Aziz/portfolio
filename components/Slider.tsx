@@ -52,16 +52,27 @@ export default function Slider() {
   return (
     <>
       <Swiper
-        slidesPerView={2}
-        spaceBetween={30}
+        slidesPerView={1}
+        spaceBetween={20}
         grabCursor={true}
+        loop={true}
         autoplay={{
             delay: 2500,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
           }}
         pagination={{
           clickable: true,
         }}
+        breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+          }}
         modules={[Pagination,Autoplay]}
         className="w-full h-full"
       > 

@@ -28,25 +28,33 @@ export default function Slider() {
         Tag:"React.js",
         Image:"/img/1.png",
         Title:"Blog Website",
-        Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa."
+        Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa.",
+        DemoLink:"/#",
+        CodeLink:"/#",
      },
      {
         Tag:"Next.js",
         Image:"/img/2.png",
         Title:"Dashboard Design",
-        Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa."
+        Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa.",
+        DemoLink:"/#",
+        CodeLink:"/#",
      },
      {
         Tag:"React.js",
         Image:"/img/3.png",
         Title:"Dashboard Design",
-        Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa."
+        Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa.",
+        DemoLink:"/#",
+        CodeLink:"/#",
      },
      {
         Tag:"React.js",
         Image:"/img/4.png",
         Title:"Dashboard Design",
-        Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa."
+        Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa.",
+        DemoLink:"/#",
+        CodeLink:"/#",
      },
     ]
   return (
@@ -59,6 +67,7 @@ export default function Slider() {
         autoplay={{
             delay: 2500,
             disableOnInteraction: true,
+            pauseOnMouseEnter:true
           }}
         pagination={{
           clickable: true,
@@ -82,7 +91,7 @@ export default function Slider() {
             <span className='absolute top-3 left-2 bg-primary px-2 rounded-xl text-white'>{data.Tag}</span>
             <div className={`pt-12 px-10 dark:bg-[url(/img/project-bg-dark.png)] bg-[url(/img/project-bg-light.png)]
              bg-center`}>
-                <img src={data.Image} alt="project" />
+                <img className='block w-full h-full object-cover' src={data.Image} alt="project" />
             </div>
             <div className='p-4 space-y-1'>
                 <h6 className='text-lg lg:text-xl font-medium text-primary'>{data.Title}</h6>
@@ -93,10 +102,14 @@ export default function Slider() {
             <div className='absolute inset-0 grid place-content-center scale-0 group-hover:scale-100 duration-200'>
             <div className='flex items-center justify-center gap-2 -translate-y-4'>
                 <div className='bg-[#292524] p-3 rounded-full text-white hover:text-primary duration-150'>
+                <a href={data.DemoLink} target='_blank'>
                 <MdOutlineLink className='text-xl'/>
+                </a>
                 </div>
                 <div className='bg-[#292524] p-3 rounded-full text-white hover:text-primary duration-150'>
+                <a href={data.CodeLink} target='_blank'>
                 <PiGithubLogoBold className='text-xl'/>
+                </a>
                 </div>
             </div>
             </div>

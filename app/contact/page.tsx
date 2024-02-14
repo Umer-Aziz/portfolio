@@ -7,9 +7,13 @@ import { Textarea } from "@/components/ui/textarea"
 import { FiMessageSquare } from 'react-icons/fi';
 import { Button } from '@/components/ui/button';
 import { TiArrowRight } from "react-icons/ti";
-
+import { motion } from 'framer-motion'; 
+import { Each } from '@/components/Each';
 
 const page: React.FC = () => {
+
+    let text = "Let's Work Together.".split("");
+
     const [focusedInput, setFocusedInput] = useState<string | null>(null);
 
     const handleInputFocus = (inputName: string) => {
@@ -26,13 +30,30 @@ const page: React.FC = () => {
             <main>
                 <div className='padd-x padd-y max-width'>
                     <section className='grid gap-8 md:grid-cols-2'>
-                        <div>
+                        <div className='max-w-72'>
                             <div className='text-primary flex items-center gap-3'>
                                 <div className='w-6 h-0.5 border-t-2 border-primary'></div>
                                 <span>Say hello 👋</span>
                             </div>
-                            <h1 className='text-5xl mt-3 mb-4'>Let's Work <br />Together.</h1>
-                            <p className='max-w-72 tracking-wide'>Have a sweet project in mind or just want to say hi ? Feel free to send me a message.</p>
+                            <h1 className='text-5xl mt-3 mb-4'>
+                            <Each of={text} render={(letter,index)=>
+                 <motion.span
+              whileInView={{ transform:[
+                 "scale3d(1,1,1)",
+                 "scale3d(1.4,.55,1)",
+                 "scale3d(1.75,1.25,1)",
+                 "scale3d(1.25,.85,1)",
+                 "scale3d(.9,1.05,1)",
+                 "scale3d(1,1,1)",
+             ] ,transition:{
+                 duration:1 , delay: index * 0.05
+             },
+             opacity:[0,1]
+          }}                
+                  className='inline-block opacity-0'>{letter === " " ? "\u00A0" : letter}</motion.span> 
+                }/>
+                            </h1>
+                            <p className='tracking-wide'>Have a sweet project in mind or just want to say hi ? Feel free to send me a message.</p>
                         </div>
                         <div>
                             <img className='w-full h-full' src="/img/contact.svg" alt="contact" />

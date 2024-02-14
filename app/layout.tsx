@@ -3,6 +3,7 @@ import { Baloo_Bhai_2, Inter } from "next/font/google";
 import "../styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 const ballo = Baloo_Bhai_2({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({
           >
             <Navbar/>
             {children}
+            <Footer/>
           </ThemeProvider>
         </body>
     </html>

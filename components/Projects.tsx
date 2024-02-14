@@ -15,7 +15,7 @@ const Projects = () => {
 
         <div className='flex flex-col justify-center items-center xl:items-start max-w-96 mx-auto xl:mx-0 gap-3 md:gap-4'>
         <div className='flex items-center gap-2'>
-        <GrProjects className='text-2xl lg:text-3xl text-primary'/>
+        <GrProjects className='text-2xl lg:text-3xl text-primary mb-1'/>
         <h2 className='text-center text-3xl lg:text-4xl text-primary font-medium'>Latest Projects</h2>
         </div>
           <div className='flex flex-col items-center xl:items-start'>

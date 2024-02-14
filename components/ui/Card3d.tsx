@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { MdOutlineDesignServices } from "react-icons/md";
-import { Each } from "./Each";
+import { Each } from "../Each";
 import { FaLaptopCode } from "react-icons/fa6";
 import { GrDocumentPerformance } from "react-icons/gr";
 const ROTATION_RANGE = 32.5;

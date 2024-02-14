@@ -2,7 +2,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaCode } from 'react-icons/fa6'
-import Card3d from './Card3d'
+import Card3d from './ui/Card3d'
 const Services = () => {
   return (
     <>

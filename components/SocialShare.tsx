@@ -33,8 +33,8 @@ const SocialShare = () => {
           <Each of={socialIcons} render={(item,index)=>
           <motion.a 
           whileInView={{opacity:[0,1],scale:[0.5,1.3,1]}}
-          transition={{duration:1,delay:0.3 + index * 0.2}}
-          viewport={{once:true}}
+          transition={{duration:1,delay:0.5 + index * 0.2}}
+          // viewport={{once:true}}
           href={item.path} className="opacity-0"><item.icon className="hover:text-primary hover:scale-110 duration-200"/></motion.a>
           }/>    
         </div>

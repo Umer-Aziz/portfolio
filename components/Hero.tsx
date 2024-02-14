@@ -7,6 +7,7 @@ import Spline from "@splinetool/react-spline";
 import AnimatedText from "./AnimatedText";
 import { Each } from "./Each";
 import SocialShare from "./SocialShare";
+import Link from "next/link";
 
 
 const Hero = () => {
@@ -53,8 +54,8 @@ const Hero = () => {
            whileInView={{opacity:[0,1]}}
            transition={{duration:1}}
            className="opacity-0"
-          ><Button className="flex items-center gap-1">
-             <span>Contact me</span> <FiSend/></Button>
+          ><Link href={"/contact"} ><Button className="flex items-center gap-1">
+             <span>Contact me</span> <FiSend/></Button></Link>
             </motion.div>
             <motion.div
            whileInView={{opacity:[0,1]}}

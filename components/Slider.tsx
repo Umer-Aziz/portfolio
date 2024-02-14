@@ -85,7 +85,7 @@ export default function Slider() {
       > 
     {SliderData.map((data,index)=>{
         return(
-            <SwiperSlide key={index} className='relative rounded-md md:rounded-lg shadow-lg hover:shadow-primary border group hover:border-primary duration-200'>
+            <SwiperSlide key={index} className='relative rounded-md md:rounded-lg shadow-md hover:shadow-primary border group hover:border-primary duration-200'>
             <span className='absolute top-3 left-2 bg-primary px-2 rounded-xl text-white'>{data.Tag}</span>
             <div className={`pt-12 px-10 dark:bg-[url(/img/project-bg-dark.png)] bg-[url(/img/project-bg-light.png)]
              bg-center`}>

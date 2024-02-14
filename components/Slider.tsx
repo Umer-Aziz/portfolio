@@ -1,14 +1,4 @@
-"use client"
-import React, { useRef, useState } from 'react';
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-  } from "@/components/ui/card";
-  
+"use client" 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { PiGithubLogoBold } from "react-icons/pi";
@@ -81,9 +71,17 @@ export default function Slider() {
               slidesPerView: 2,
               spaceBetween: 30,
             },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1280: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
           }}
         modules={[Pagination,Autoplay]}
-        className="w-full h-full"
+        className="w-full h-full !pb-8"
       > 
     {SliderData.map((data,index)=>{
         return(

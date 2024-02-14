@@ -88,7 +88,7 @@ html::-webkit-scrollbar-thumb{
   }
   body {
     /* #212529  */
-    @apply bg-background text-foreground min-h-[200rem] overflow-x-hidden;
+    @apply bg-background text-foreground overflow-x-hidden;
   }
   .padd-x{
     @apply px-4 sm:px-6 xl:px-0;

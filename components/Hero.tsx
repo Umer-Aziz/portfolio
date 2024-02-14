@@ -4,37 +4,16 @@ import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion"; 
 import { FiSend , FiDownload } from "react-icons/fi";
 import Spline from "@splinetool/react-spline";
-import { FaSquareXTwitter ,FaSquareFacebook , FaGithub , FaLinkedin , FaStackOverflow } from "react-icons/fa6";
 import AnimatedText from "./AnimatedText";
 import { Each } from "./Each";
+import SocialShare from "./SocialShare";
 
 
 const Hero = () => {
 
   let description = "I craft interactive and user-friendly experiences on the web, transforming ideas into functional and visually appealing websites and applications.".split(" ");
 
-    const socialIcons = [
-        {
-          path:"/",
-          icon:FaSquareFacebook
-        },
-        {
-          path:"/",
-          icon:FaSquareXTwitter
-        },
-        {
-          path:"/",
-          icon:FaLinkedin
-        },
-        {
-          path:"/",
-          icon:FaGithub
-        },
-        {
-          path:"/",
-          icon:FaStackOverflow
-        },
-      ]
+   
   return (
     <>
      <section className="max-width padd-x padd-y grid md:grid-cols-2 gap-8">
@@ -86,16 +65,7 @@ const Hero = () => {
              <span>Download CV</span> <FiDownload className="mb-1"/></Button>
              </motion.div>
         </div>
-        {/* Social Share  */}
-        <div className="mt-8 flex gap-4 items-center text-xl md:text-2xl">
-          <Each of={socialIcons} render={(item,index)=>
-          <motion.a 
-          animate={{scale:[0.5,1.5,1]}}
-          whileInView={{opacity:[0,1]}}
-          transition={{duration:1,delay:0.7 + index * 0.2}}
-          href={item.path} className="opacity-0"><item.icon className="hover:text-primary hover:scale-110 duration-200"/></motion.a>
-          }/>    
-        </div>
+       <SocialShare/>
         </div>
         <div className="w-full flex justify-center">
       {/* Render the Spline Viewer component */}

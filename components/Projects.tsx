@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { GrProjects } from "react-icons/gr";
 import { Button } from './ui/button';
 import Slider from './Slider';
+import Link from 'next/link';
 const Projects = () => {
   return (
     <>
@@ -20,7 +21,7 @@ const Projects = () => {
         </div>
           <div className='flex flex-col items-center xl:items-start'>
           <p className='text-center xl:text-left'>Dive into My showcase of captivating projects, crafted with creativity and precision.</p>
-           <Button className='mt-3 md:mt-4'>All Projects</Button>
+          <Link href={"/portfolio"}><Button className='mt-3 md:mt-4'>All Projects</Button></Link> 
           </div>
         </div>
 

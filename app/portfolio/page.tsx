@@ -17,7 +17,7 @@ const page = () => {
                             <GoProjectSymlink className='text-2xl lg:text-3xl text-primary mb-0.5' />
                             <h2 className='text-center text-3xl lg:text-4xl text-primary font-medium'>My Projects</h2>
                         </div>
-                        <div className='mt-12 md:mt-16'>
+                        <div className='mt-12 md:mt-16 min-h-[50vh]'>
                             <ProjectTabs/>
                         </div>
                     </section>

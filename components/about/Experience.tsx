@@ -53,8 +53,8 @@ const Experience = () => {
                                 <div className='relative'>
                                     {/* Timeline card content */}
                                     <div className={`relative bg-secondary rounded ml-6 md:ml-0 p-6 w-full md:w-[43%] lg:w-[44%] xl:w-[45%] bg-opacity-85 ${index % 2 === 1 &&  "md:float-right"}`}>
-                                        <h2 className='uppercase text-2xl'>{item.title}</h2>
-                                        <h3 className='text-primary font-semibold capitalize'>{item.subtitle}</h3>
+                                        <h2 className='uppercase text-xl font-medium'>{item.title}</h2>
+                                        <h3 className='text-primary font-medium capitalize'>{item.subtitle}</h3>
                                         <p className='mt-2'>{item.description}</p>
                                         <div className='Tag mt-3 flex items-center gap-3'>
                                             {/* Loop through tags */}

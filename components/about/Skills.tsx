@@ -38,7 +38,7 @@ const Skills = () => {
                 </div>
 
                 {/* Design  */}
-                <div className='xl:col-span-2'>
+                <div className='xl:col-span-2 xl:pl-16'>
                 <div className='flex items-center gap-3 text-2xl font-medium md:font-semibold lg:font-bold uppercase'>
                         <CgIfDesign className='text-primary'/>
                     <h5>Design</h5>

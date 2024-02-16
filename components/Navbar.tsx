@@ -17,7 +17,7 @@ const Navbar = () => {
       title:"Home"
     },
     {
-      link:"/#about",
+      link:"/about",
       title:"About"
     },
     {

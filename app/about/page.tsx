@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Banner from '@/components/Banner';
 import About from '@/components/home/About';
 import Skills from '@/components/about/Skills';
+import Experience from '@/components/about/Experience';
 
 const page = () => {
     return (
@@ -13,6 +14,7 @@ const page = () => {
                     transition={{ duration: 1 }}>
                        <About/>
                        <Skills/>
+                       <Experience/>
                 </motion.div>
                 <Banner/>
             </main>

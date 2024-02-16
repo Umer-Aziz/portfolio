@@ -41,7 +41,7 @@ const Skills = () => {
                 <div className='xl:col-span-2 xl:pl-16'>
                 <div className='flex items-center gap-3 text-2xl font-medium md:font-semibold lg:font-bold uppercase'>
                         <CgIfDesign className='text-primary'/>
-                    <h5>Design</h5>
+                    <h5>UI Design</h5>
                     </div>
                     <div className='mt-6 md:mt-8 text-3xl md:text-4xl flex items-center justify-center md:justify-start gap-8'>
                       <FaFigma/>

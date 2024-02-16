@@ -1,9 +1,9 @@
-import About from "@/components/About";
+import About from "@/components/home/About";
 import Banner from "@/components/Banner";
-import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
-import Reviews from "@/components/Reviews";
-import Services from "@/components/Services";
+import Hero from "@/components/home/Hero";
+import Projects from "@/components/home/Projects";
+import Reviews from "@/components/home/Reviews";
+import Services from "@/components/home/Services";
 
 export default function Home() {
   

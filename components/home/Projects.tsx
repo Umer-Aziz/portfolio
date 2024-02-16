@@ -2,7 +2,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import { GrProjects } from "react-icons/gr";
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 import Slider from './Slider';
 import Link from 'next/link';
 const Projects = () => {

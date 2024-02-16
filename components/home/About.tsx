@@ -5,7 +5,7 @@ import { MdRoundaboutRight , MdOutlineMailOutline, MdOutlineHome } from "react-i
 import { FaRegUser , FaWhatsapp } from "react-icons/fa6";
 import { PiStudent } from "react-icons/pi";
 import { IoLanguage } from "react-icons/io5";
-import { Each } from './Each';
+import { Each } from '../Each';
 const About = () => {
     let text = "I BUILD INNOVATIVE THINGS FOR THE WEB".split("");
   return (

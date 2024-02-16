@@ -4,9 +4,9 @@ import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion"; 
 import { FiSend , FiDownload } from "react-icons/fi";
 import Spline from "@splinetool/react-spline";
-import AnimatedText from "./AnimatedText";
-import { Each } from "./Each";
-import SocialShare from "./SocialShare";
+import AnimatedText from "../AnimatedText";
+import { Each } from "../Each";
+import SocialShare from "../SocialShare";
 import Link from "next/link";
 
 

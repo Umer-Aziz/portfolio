@@ -19,7 +19,7 @@ const Skills = () => {
     id='reviews' className='max-width padd-x padd-y'>
         <div>
             <h4 className='text-4xl lg:text-5xl text-primary border-b-2 pb-1 border-primary inline-block'>Skills</h4>
-             <div className='mt-8 md:mt-12 grid md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-12'>
+             <div className='mt-8 md:mt-16 lg:mt-20 xl:mt-24 grid md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-12'>
 
                  {/* Development  */}
                 <div>

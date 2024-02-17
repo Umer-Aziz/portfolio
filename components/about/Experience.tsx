@@ -41,18 +41,24 @@ const Experience = () => {
                     <div className='flex justify-center'>
                         <h4 className='text-4xl lg:text-5xl text-primary border-b-2 pb-1 border-primary inline-block'>Experience</h4>
                     </div>
-                    <div className='relative mt-8 md:mt-16 lg:mt-20 xl:mt-24'>
+                    <div className='relative my-8 md:mt-16 lg:mt-20 xl:mt-24'>
                         <div className='absolute left-4 md:left-1/2 h-full w-0.5 bg-primary'></div>
                          {/* Timeline Img  */}
-                         <div className='absolute top-full md:left-1/2 -ml-1 md:-ml-5 lg:-ml-6 w-10 h-10 lg:w-12 lg:h-12 bg-secondary rounded-full grid place-content-center'>
+                         <motion.div 
+                          whileInView={{opacity:[0,1],scale:[0.5,1.5,1]}}
+                          transition={{duration:0.5}}
+                         className='absolute top-full md:left-1/2 -ml-1 md:-ml-5 lg:-ml-6 w-10 h-10 lg:w-12 lg:h-12 bg-secondary rounded-full grid place-content-center'>
                                         <GiSandsOfTime className='text-primary text-2xl lg:text-3xl' />
-                                    </div>
+                                    </motion.div>
                         <div className='p-8 grid gap-16'>
 
                             <Each of={experience} render={(item, index) =>
                                 <div className='relative'>
                                     {/* Timeline card content */}
-                                    <div className={`relative bg-secondary rounded ml-6 md:ml-0 p-6 w-full md:w-[43%] lg:w-[44%] xl:w-[45%] bg-opacity-85 ${index % 2 === 1 &&  "md:float-right"}`}>
+                                    <motion.div
+                                     whileInView={{opacity:[0,1],translateX:[-70,30,0]}}
+                                     transition={{duration:0.7}}
+                                     className={`relative bg-secondary rounded ml-6 md:ml-0 p-6 w-full md:w-[43%] lg:w-[44%] xl:w-[45%] bg-opacity-85 ${index % 2 === 1 &&  "md:float-right"}`}>
                                         <h2 className='uppercase text-xl font-medium'>{item.title}</h2>
                                         <h3 className='text-primary font-medium capitalize'>{item.subtitle}</h3>
                                         <p className='mt-2'>{item.description}</p>
@@ -64,16 +70,22 @@ const Experience = () => {
                                         </div>
                                         {/* shape  */}
                                         <div className={`absolute top-6 -z-10 rotate-45 bg-secondary w-8 h-8 ${index % 2 === 1 ? "-left-2":"-left-2 md:left-auto md:-right-2"}`}></div>
-                                    </div>
+                                    </motion.div>
 
                                     {/* Timeline Img  */}
-                                    <div className='absolute top-4 -left-4 md:top-5 md:left-1/2 -ml-5 lg:-ml-6 w-10 h-10 lg:w-12 lg:h-12 bg-secondary rounded-full grid place-content-center'>
+                                    <motion.div 
+                                    whileInView={{opacity:[0,1],scale:[0.5,1.5,1]}}
+                                    transition={{duration:0.7}}
+                                    className='absolute shadow top-4 -left-4 md:top-5 md:left-1/2 -ml-5 lg:-ml-6 w-10 h-10 lg:w-12 lg:h-12 bg-secondary rounded-full grid place-content-center'>
                                         <item.icon className='text-primary text-2xl lg:text-3xl' />
-                                    </div>
+                                    </motion.div>
 
-                                    <div className={`md:absolute md:top-7 ${index % 2 === 1 ? "mt-4 md:mt-0 md:right-[55%]":"mt-4 md:mt-0 md:left-[55%]"}`}>
+                                    <motion.div
+                                     whileInView={{opacity:[0,1],translateX:[50,-20,0]}}
+                                     transition={{duration:0.7}}
+                                     className={`md:absolute md:top-7 ${index % 2 === 1 ? "mt-4 md:mt-0 md:right-[55%]":"mt-4 md:mt-0 md:left-[55%]"}`}>
                                         <p className='text-xl font-medium uppercase'>{item.date}</p>
-                                    </div>
+                                    </motion.div>
                                 </div>
                             } />
 

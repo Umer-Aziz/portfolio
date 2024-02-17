@@ -2,8 +2,10 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import { LiaGraduationCapSolid , LiaChalkboardTeacherSolid } from "react-icons/lia";
-
+import { GoCodeReview } from "react-icons/go";
 import { GiSandsOfTime } from "react-icons/gi";
+import { FaLaptopCode , FaCodeMerge} from "react-icons/fa6";
+
 import { Each } from '../Each';
 
 const Experience = () => {
@@ -14,7 +16,7 @@ const Experience = () => {
             description: "Graduated with a Bachelor of Science in Software Engineering, specializing in web development. Proficient in HTML, CSS, JavaScript, React, Node.js, and building responsive, user-friendly web applications. Degree received in Sep 2023.",
             tags: ['html', 'css', 'javascript',"Php","C#"],
             icon: LiaGraduationCapSolid,
-            date: "2019 - 2023"
+            date: "Sep 2019 - 2023"
         },
         {
             title: "Student Assistant",
@@ -25,12 +27,28 @@ const Experience = () => {
             date: "Dec 2019 - Oct 2021"
         },
         {
-            title: "Bs , Electrical Engineering",
-            subtitle: "Must university",
-            description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, animi minus? Aut iusto tempore ab quo hic. Dolor temporibus eum delectus odio dolore nihil?",
-            tags: ['html', 'css', 'React.js'],
-            icon: LiaGraduationCapSolid,
-            date: "Dec 2019 -Oct 2021"
+            title: "Web Developer - Intern",
+            subtitle: "Digidolph",
+            description: "Web development intern specializing in the MERN stack, proficient in React.js. Contributed to building dynamic web applications, collaborating within cross-functional teams.",
+            tags: ['html', 'css', ,"Tailwind css",'React.js',"Node.js"],
+            icon: GoCodeReview,
+            date: "Aug / Oct - 2022"
+        },
+        {
+            title: "Web Developer - Contract",
+            subtitle: "Newday",
+            description: "Contract-based web developer adept at transforming Figma designs into responsive websites using Tailwind CSS. Skilled in API implementation and collaborating with clients to deliver high-quality solutions efficiently.",
+            tags: ['html', 'css', ,"Tailwind css",'javascript',"php","Wordpress"],
+            icon: FaLaptopCode,
+            date: "Dec 2021 - July 2022"
+        },
+        {
+            title: "Web Developer",
+            subtitle: "Upwork / Freelance",
+            description: "Freelance web developer providing Figma/PSD to responsive website conversion, frontend development, and comprehensive API and backend development to deliver comprehensive solutions tailored to clients' needs.",
+            tags: ["Tailwind css",'React.js',"Next.js","Wordpress","shopify"],
+            icon: FaCodeMerge,
+            date: "March 2021 - Present"
         },
     ]
     return (
@@ -63,7 +81,7 @@ const Experience = () => {
                                         <h2 className='uppercase text-xl font-medium'>{item.title}</h2>
                                         <h3 className='text-primary font-medium capitalize'>{item.subtitle}</h3>
                                         <p className='mt-2'>{item.description}</p>
-                                        <div className='Tag mt-3 flex items-center gap-3'>
+                                        <div className='Tag mt-3 flex flex-wrap items-center gap-3'>
                                             {/* Loop through tags */}
                                             {item.tags.map((tag:string, index:number) => (
                                                 <span key={index} className='px-2 bg-primary rounded-2xl text-sm text-white'>{tag}</span>

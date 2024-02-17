@@ -1,7 +1,8 @@
 "use client"
 import React from 'react'
 import { motion } from 'framer-motion';
-import { LiaGraduationCapSolid } from "react-icons/lia";
+import { LiaGraduationCapSolid , LiaChalkboardTeacherSolid } from "react-icons/lia";
+
 import { GiSandsOfTime } from "react-icons/gi";
 import { Each } from '../Each';
 
@@ -10,18 +11,18 @@ const Experience = () => {
         {
             title: "Bs , Software engineering",
             subtitle: "Must university",
-            description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, animi minus? Aut iusto tempore ab quo hic. Dolor temporibus eum delectus odio dolore nihil?",
-            tags: ['html', 'css', 'next.js'],
+            description: "Graduated with a Bachelor of Science in Software Engineering, specializing in web development. Proficient in HTML, CSS, JavaScript, React, Node.js, and building responsive, user-friendly web applications. Degree received in Sep 2023.",
+            tags: ['html', 'css', 'javascript',"Php","C#"],
             icon: LiaGraduationCapSolid,
             date: "2019 - 2023"
         },
         {
-            title: "Bs , Software engineering",
-            subtitle: "Must university",
-            description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, animi minus? Aut iusto tempore ab quo hic. Dolor temporibus eum delectus odio dolore nihil?",
-            tags: ['html', 'css', 'React.js'],
-            icon: LiaGraduationCapSolid,
-            date: "May - 2023"
+            title: "Student Assistant",
+            subtitle: "Software Engineering Society (SES) MUST",
+            description: "Skilled Student Assistant in Software Engineering Society, adept in communication, event management, and teaching. Specializes in coding events and supporting junior students' learning.",
+            tags: ['Organization', 'Problem-solving',"Technical proficiency"],
+            icon: LiaChalkboardTeacherSolid,
+            date: "Dec 2019 - Oct 2021"
         },
         {
             title: "Bs , Electrical Engineering",
@@ -29,7 +30,7 @@ const Experience = () => {
             description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, animi minus? Aut iusto tempore ab quo hic. Dolor temporibus eum delectus odio dolore nihil?",
             tags: ['html', 'css', 'React.js'],
             icon: LiaGraduationCapSolid,
-            date: "Jan - 2022"
+            date: "Dec 2019 -Oct 2021"
         },
     ]
     return (

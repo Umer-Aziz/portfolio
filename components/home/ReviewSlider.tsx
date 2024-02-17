@@ -39,7 +39,7 @@ export default function ReviewSlider() {
         }, 
         {
             Image: "/img/avatar-5.png",
-            Title: "Muhammad Hamza ",
+            Title: "Kurram Shazad",
             fallback:"MH",
             subTitle:"President SES",
             Desc: "Working alongside Mr Umer has been a privilege.Their dedication and leadership have greatly enhanced our society. Their commitment to fostering growth has been instrumental in achieving our goals."    

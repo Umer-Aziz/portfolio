@@ -6,6 +6,7 @@ import { FaRegUser , FaWhatsapp } from "react-icons/fa6";
 import { PiStudent } from "react-icons/pi";
 import { IoLanguage } from "react-icons/io5";
 import { Each } from '../Each';
+import Image from 'next/legacy/image';
 const About = () => {
     let text = "I BUILD INNOVATIVE THINGS FOR THE WEB".split("");
   return (
@@ -23,7 +24,7 @@ const About = () => {
         <div className="pt-12 lg:pt-16 flex flex-col-reverse  md:flex-row md:justify-between gap-16">
             
         <div className='w-full md:w-2/4'>
-            <img className='w-11/12 max-h-96 drop-shadow-lg' src={"/img/about.svg"} alt='about'/>
+            <Image layout='responsive' priority={true} width={800} height={500} className='w-11/12 max-h-96 drop-shadow-lg' src={"/img/about.svg"} alt='about'/>
         </div>
 
         <div className='w-full md:w-2/4'>
@@ -45,7 +46,7 @@ const About = () => {
                   className='inline-block opacity-0'>{letter === " " ? "\u00A0" : letter}</motion.span> 
                 }/>
             </h3>
-            <p className='mt-2 xl:mt-4 tracking-wide'>Explore my skills and projects, where technology meets creativity in perfect harmony, crafting innovative solutions for tomorrow's challenges.</p>
+            <p className='mt-2 xl:mt-4 tracking-wide'>Explore my skills and projects, where technology meets creativity in perfect harmony, crafting innovative solutions for tomorrow&apos;s challenges.</p>
             <div className='mt-6 xl:mt-8 grid gap-3 md:gap-4'>
                 <div className='grid gap-3 lg:grid-cols-2'>
                     <div className='flex items-center gap-3'>

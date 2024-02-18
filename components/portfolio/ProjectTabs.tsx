@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { PiGithubLogoBold } from "react-icons/pi";
 import { MdOutlineLink } from 'react-icons/md';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from 'next/legacy/image';
 
 const ProjectTabs = () => {
     const [selectedTab, setSelectedTab] = useState("all");
@@ -101,7 +102,7 @@ const ProjectTabs = () => {
                                 <div key={index} className='cursor-pointer relative rounded-md md:rounded-lg shadow-md hover:shadow-primary border group hover:border-primary duration-200'>
                                     <span className='absolute top-3 left-2 bg-primary px-2 rounded-xl text-white'>{data.Tag}</span>
                                     <div className={`pt-12 px-10 dark:bg-[url(/img/project-bg-dark.png)] bg-[url(/img/project-bg-light.png)] bg-center`}>
-                                        <img className='block w-full h-full object-cover bg-contain rounded-t-xl' src={data.Image} alt="project" />
+                                        <Image layout='responsive' width={500} height={500} className='block w-full h-full object-cover bg-contain rounded-t-xl' src={data.Image} alt="project" />
                                     </div>
                                     <div className='p-4 space-y-1'>
                                         <h6 className='text-lg lg:text-xl font-medium text-primary'>{data.Title}</h6>

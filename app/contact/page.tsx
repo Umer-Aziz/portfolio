@@ -9,8 +9,9 @@ import { Button } from '@/components/ui/button';
 import { TiArrowRight } from "react-icons/ti";
 import { motion } from 'framer-motion'; 
 import { Each } from '@/components/Each';
+import Image from 'next/legacy/image';
 
-const page: React.FC = () => {
+const page = () => {
 
     let text = "Let's Work Together.".split("");
 
@@ -56,7 +57,7 @@ const page: React.FC = () => {
                             <p className='tracking-wide'>Have a sweet project in mind or just want to say hi ? Feel free to send me a message.</p>
                         </div>
                         <div>
-                            <img className='w-full h-full' src="/img/contact.svg" alt="contact" />
+                            <Image layout='responsive' priority={true} width={800} height={500} className='w-full h-full' src="/img/contact.svg" alt="contact" />
                         </div>
                     </section>
                     <section className='mt-16 lg:mt-20 grid gap-8 md:grid-cols-2'>

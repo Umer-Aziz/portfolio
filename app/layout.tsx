@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Baloo_Bhai_2, Inter } from "next/font/google";
+import { Baloo_Bhai_2 } from "next/font/google";
 import "../styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/Navbar";

@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
 import { MdOutlineLink } from 'react-icons/md';
+import Image from 'next/legacy/image';
 
 export default function Slider() {
     const SliderData = [
@@ -98,7 +99,7 @@ export default function Slider() {
             <span className='absolute top-3 left-2 bg-primary px-2 rounded-xl text-white'>{data.Tag}</span>
             <div className={`pt-12 px-10 dark:bg-[url(/img/project-bg-dark.png)] bg-[url(/img/project-bg-light.png)]
              bg-center`}>
-                <img className='block w-full h-full min-h-52 object-cover bg-contain rounded-t-lg' src={data.Image} alt="project" />
+                <Image layout='responsive' width={500} height={500} className='block w-full h-full min-h-52 object-cover bg-contain rounded-t-lg' src={data.Image} alt="project" />
             </div>
             <div className='p-4 space-y-1'>
                 <h6 className='text-lg lg:text-xl font-medium text-primary'>{data.Title}</h6>

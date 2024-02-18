@@ -35,7 +35,7 @@ const Navbar = () => {
   ]
   return (
    <>
-   <nav className=''>
+   <nav>
     <div className='relative max-width padd-x py-4 flex justify-between items-center'>
     <div className='text-2xl font-bold'>
      <span className="text-primary">Umer</span>

@@ -18,16 +18,8 @@ export default function Slider() {
      {
         Tag:"React.js",
         Image:"/img/3.png",
-        Title:"Dashboard Design",
-        Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa.",
-        DemoLink:"/#",
-        CodeLink:"/#",
-     },
-     {
-        Tag:"React.js",
-        Image:"/img/4.png",
-        Title:"Dashboard Design",
-        Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa.",
+        Title:"Online Learning Platform",
+        Desc:"A versatile online learning hub for personalized skill development.",
         DemoLink:"/#",
         CodeLink:"/#",
      },
@@ -47,6 +39,14 @@ export default function Slider() {
       DemoLink:"https://zaancorp-test.vercel.app/",
       CodeLink:"https://github.com/Umer-Aziz/zaancorp",
    },
+   {
+    Tag:"React.js",
+    Image:"/img/4.png",
+    Title:"Online Courses Academy",
+    Desc:"A versatile online learning hub for personalized skill development.",
+    DemoLink:"/#",
+    CodeLink:"/#",
+ },
    {
       Tag:"Next.js",
       Image:"/img/portfolio/temp-mail.png",

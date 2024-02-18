@@ -7,40 +7,80 @@ const ProjectTabs = () => {
     const [selectedTab, setSelectedTab] = useState("all");
 
     const ProjectData = [
+     
         {
-            Tag:"React.js",
-            Image:"/img/1.png",
-            Title:"Blog Website",
-            Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa.",
-            DemoLink:"/#",
-            CodeLink:"/#",
+           Tag:"Next.js",
+           Image:"/img/1.png",
+           Title:"Virtual University",
+           Desc:"A dynamic online learning platform for personalized skill enhancement.",
+           DemoLink:"/#",
+           CodeLink:"/#",
         },
         {
-            Tag:"Next.js",
-            Image:"/img/2.png",
-            Title:"Dashboard Design",
-            Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa.",
-            DemoLink:"/#",
-            CodeLink:"/#",
-        },
+         Tag:"Node.js",
+         Image:"/img/portfolio/image-converter.png",
+         Title:"Image converter app",
+         Desc:"Convert an image from png to jpg , jpeg , webp and other format.",
+         DemoLink:"https://hilarious-mite-wig.cyclic.app/",
+         CodeLink:"https://github.com/Umer-Aziz/images-converter",
+      },
         {
-            Tag:"React.js",
-            Image:"/img/3.png",
-            Title:"Dashboard Design",
-            Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa.",
-            DemoLink:"/#",
-            CodeLink:"/#",
-        },
-        {
-            Tag:"fullstack",
-            Image:"/img/4.png",
-            Title:"Dashboard Design",
-            Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa.",
-            DemoLink:"/#",
-            CodeLink:"/#",
-        },
-    ];
-
+         Tag:"React.js",
+         Image:"/img/portfolio/admin.png",
+         Title:"Admin Panel UI",
+         Desc:"Admin panel design developed by using React.js Material-ui",
+         DemoLink:"https://github.com/Umer-Aziz/React_adminpanel",
+         CodeLink:"https://github.com/Umer-Aziz/React_adminpanel",
+      },
+      {
+        Tag:"React.js",
+        Image:"/img/3.png",
+        Title:"Online Learning Platform",
+        Desc:"A flexible online learning platform for personalized skill growth.",
+        DemoLink:"/#",
+        CodeLink:"/#",
+     },
+      {
+         Tag:"Next.js",
+         Image:"/img/portfolio/zaancorp.png",
+         Title:"Dashboard Design",
+         Desc:"Design of Workflow of a corporation Like Todos , using Next.js",
+         DemoLink:"https://zaancorp-test.vercel.app/",
+         CodeLink:"https://github.com/Umer-Aziz/zaancorp",
+      },
+      {
+       Tag:"React.js",
+       Image:"/img/4.png",
+       Title:"Online Courses Academy",
+       Desc:"A versatile online learning hub for personalized skill development.",
+       DemoLink:"/#",
+       CodeLink:"/#",
+    },
+      {
+         Tag:"Next.js",
+         Image:"/img/portfolio/temp-mail.png",
+         Title:"Temp Mail Website",
+         Desc:"Temp Mail provides temporary, free, disposable email address.",
+         DemoLink:"https://temp-mail-sepia.vercel.app/",
+         CodeLink:"https://github.com/Umer-Aziz/temp-mail",
+      },
+      {
+        Tag:"Node.js",
+        Image:"/img/portfolio/portfolio.png",
+        Title:"Developer Portfolio",
+        Desc:"Developer portfolio website using html , css and Node.js",
+        DemoLink:"https://nice-puce-rooster-wrap.cyclic.app/",
+        CodeLink:"https://github.com/Umer-Aziz/portfolio-website",
+     },
+      {
+        Tag:"Node.js",
+        Image:"/img/2.png",
+        Title:"Pizza Ordering Website",
+        Desc:"pizza ordering website with payment method using Mongodb & Node,js",
+        DemoLink:"https://github.com/Umer-Aziz/pizzabuzz",
+        CodeLink:"https://github.com/Umer-Aziz/pizzabuzz",
+     },
+       ]
     const filteredProjects = selectedTab === "all" ? ProjectData : ProjectData.filter(project => project.Tag === selectedTab);
 
     return (
@@ -51,7 +91,7 @@ const ProjectTabs = () => {
                         <TabsTrigger value="all" onClick={() => setSelectedTab("all")}>All Projects</TabsTrigger>
                         <TabsTrigger value="React.js" onClick={() => setSelectedTab("React.js")}>React.js</TabsTrigger>
                         <TabsTrigger value="Next.js" onClick={() => setSelectedTab("Next.js")}>Next.js</TabsTrigger>
-                        <TabsTrigger value="fullstack" onClick={() => setSelectedTab("fullstack")}>FullStack</TabsTrigger>
+                        <TabsTrigger value="Node.js" onClick={() => setSelectedTab("Node.js")}>Node.js</TabsTrigger>
                     </TabsList>
                 </div>
                 <div className='mt-12 md:mt-16'>
@@ -61,7 +101,7 @@ const ProjectTabs = () => {
                                 <div key={index} className='cursor-pointer relative rounded-md md:rounded-lg shadow-md hover:shadow-primary border group hover:border-primary duration-200'>
                                     <span className='absolute top-3 left-2 bg-primary px-2 rounded-xl text-white'>{data.Tag}</span>
                                     <div className={`pt-12 px-10 dark:bg-[url(/img/project-bg-dark.png)] bg-[url(/img/project-bg-light.png)] bg-center`}>
-                                        <img className='block w-full h-full object-cover' src={data.Image} alt="project" />
+                                        <img className='block w-full h-full object-cover bg-contain rounded-t-xl' src={data.Image} alt="project" />
                                     </div>
                                     <div className='p-4 space-y-1'>
                                         <h6 className='text-lg lg:text-xl font-medium text-primary'>{data.Title}</h6>

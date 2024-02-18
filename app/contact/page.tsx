@@ -15,7 +15,8 @@ const page = () => {
 
     let text = "Let's Work Together.".split("");
 
-    const [focusedInput, setFocusedInput] = useState<string | null>(null);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+const [focusedInput, setFocusedInput] = useState<string | null>(null);
 
     const handleInputFocus = (inputName: string) => {
         setFocusedInput(inputName);

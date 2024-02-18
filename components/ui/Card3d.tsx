@@ -4,6 +4,7 @@ import { MdOutlineDesignServices } from "react-icons/md";
 import { Each } from "../Each";
 import { FaLaptopCode } from "react-icons/fa6";
 import { GrDocumentPerformance } from "react-icons/gr";
+
 const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
 
@@ -39,8 +40,8 @@ const Card3d: React.FC = () => {
   const cards = useRef<(HTMLDivElement | null)[]>(Array(Services.length).fill(null).map(() => null));
 
   const [hoveredCardIndex, setHoveredCardIndex] = useState<number | null>(null);
-
-  const handleMouseMove: React.MouseEventHandler<HTMLDivElement> = (index, e) => {
+  
+  const handleMouseMove = (e:any, index:number) => {
     if (!cards.current[index]) return;
 
     const rect = cards.current[index]!.getBoundingClientRect();
@@ -76,38 +77,37 @@ const Card3d: React.FC = () => {
 
   return (
     <div className="pt-12 lg:pt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-x-12">
-    <Each of={Services} render={(data,index)=>
-      <motion.div
-      key={index}
-      ref={(el) => (cards.current[index] = el)}
-      onMouseMove={(e) => handleMouseMove(index, e)}
-      onMouseLeave={handleMouseLeave}
-      style={{
-        transformStyle: "preserve-3d"
-      }}
-      whileInView={{ opacity:[0,1],translateX:[-50,0],translateY:[-50,0],transition:{duration:0.5,delay:index * 0.2}}}
-    
-      className="cursor-grab relative h-96 w-full rounded-xl bg-gradient-to-br from-primary dark:to-secondary to-gray-800"
-    >
-      <div
-        style={{
-          transform: "translateZ(75px)",
-          transformStyle: "preserve-3d"
-        }}
-        className="absolute inset-4 grid rounded-xl bg-background shadow-lg"
-      >
-        <div className="px-4 py-8">
-          <div className="flex justify-center">
-            <data.Icon className="text-5xl text-primary" />
+      <Each of={Services} render={(data, index) =>
+        <motion.div
+          key={index}
+          ref={(el) => (cards.current[index] = el)}
+          onMouseMove={(e) => handleMouseMove(e, index)}
+          onMouseLeave={handleMouseLeave}
+          style={{
+            transformStyle: "preserve-3d"
+          }}
+          whileInView={{ opacity: [0, 1], translateX: [-50, 0], translateY: [-50, 0], transition: { duration: 0.5, delay: index * 0.2 } }}
+          className="cursor-grab relative h-96 w-full rounded-xl bg-gradient-to-br from-primary dark:to-secondary to-gray-800"
+        >
+          <div
+            style={{
+              transform: "translateZ(75px)",
+              transformStyle: "preserve-3d"
+            }}
+            className="absolute inset-4 grid rounded-xl bg-background shadow-lg"
+          >
+            <div className="px-4 py-8">
+              <div className="flex justify-center">
+                <data.Icon className="text-5xl text-primary" />
+              </div>
+              <div className="pt-6">
+                <h5 className="text-center text-3xl">{data.Title}</h5>
+                <p className="pt-3 tracking-wide text-center">{data.Desc}</p>
+              </div>
+            </div>
           </div>
-          <div className="pt-6">
-            <h5 className="text-center text-3xl">{data.Title}</h5>
-            <p className="pt-3 tracking-wide text-center">{data.Desc}</p>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-    }/>
+        </motion.div>
+      } />
     </div>
   );
 };

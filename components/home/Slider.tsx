@@ -47,6 +47,14 @@ export default function Slider() {
       DemoLink:"https://zaancorp-test.vercel.app/",
       CodeLink:"https://github.com/Umer-Aziz/zaancorp",
    },
+   {
+      Tag:"Next.js",
+      Image:"/img/portfolio/temp-mail.png",
+      Title:"Temp Mail Website",
+      Desc:"Temp Mail provides temporary, free, disposable email address.",
+      DemoLink:"https://temp-mail-sepia.vercel.app/",
+      CodeLink:"https://github.com/Umer-Aziz/temp-mail",
+   },
     ]
   return (
     <>

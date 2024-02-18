@@ -14,22 +14,7 @@ import { MdOutlineLink } from 'react-icons/md';
 
 export default function Slider() {
     const SliderData = [
-     {
-        Tag:"React.js",
-        Image:"/img/1.png",
-        Title:"Blog Website",
-        Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa.",
-        DemoLink:"/#",
-        CodeLink:"/#",
-     },
-     {
-        Tag:"Next.js",
-        Image:"/img/2.png",
-        Title:"Dashboard Design",
-        Desc:"Lorem ipsum dolor sit, amet consec adipisicing elit osfwa.",
-        DemoLink:"/#",
-        CodeLink:"/#",
-     },
+     
      {
         Tag:"React.js",
         Image:"/img/3.png",
@@ -46,6 +31,22 @@ export default function Slider() {
         DemoLink:"/#",
         CodeLink:"/#",
      },
+     {
+      Tag:"Node.js",
+      Image:"/img/portfolio/image-converter.png",
+      Title:"Image converter app",
+      Desc:"Convert an image from png to jpg , jpeg , webp and other format.",
+      DemoLink:"https://hilarious-mite-wig.cyclic.app/",
+      CodeLink:"https://github.com/Umer-Aziz/images-converter",
+   },
+   {
+      Tag:"Next.js",
+      Image:"/img/portfolio/zaancorp.png",
+      Title:"Dashboard Design",
+      Desc:"Design of Workflow of a corporation Like Todos , using Next.js",
+      DemoLink:"https://zaancorp-test.vercel.app/",
+      CodeLink:"https://github.com/Umer-Aziz/zaancorp",
+   },
     ]
   return (
     <>
@@ -89,7 +90,7 @@ export default function Slider() {
             <span className='absolute top-3 left-2 bg-primary px-2 rounded-xl text-white'>{data.Tag}</span>
             <div className={`pt-12 px-10 dark:bg-[url(/img/project-bg-dark.png)] bg-[url(/img/project-bg-light.png)]
              bg-center`}>
-                <img className='block w-full h-full object-cover' src={data.Image} alt="project" />
+                <img className='block w-full h-full min-h-52 object-cover bg-contain rounded-t-lg' src={data.Image} alt="project" />
             </div>
             <div className='p-4 space-y-1'>
                 <h6 className='text-lg lg:text-xl font-medium text-primary'>{data.Title}</h6>
@@ -99,16 +100,16 @@ export default function Slider() {
             {/* // Refrence Link  */}
             <div className='absolute inset-0 grid place-content-center scale-0 group-hover:scale-100 duration-200'>
             <div className='flex items-center justify-center gap-2 -translate-y-4'>
-                <div className='bg-[#292524] p-3 rounded-full text-white hover:text-primary duration-150'>
                 <a href={data.DemoLink} target='_blank'>
-                <MdOutlineLink className='text-xl'/>
-                </a>
-                </div>
                 <div className='bg-[#292524] p-3 rounded-full text-white hover:text-primary duration-150'>
-                <a href={data.CodeLink} target='_blank'>
-                <PiGithubLogoBold className='text-xl'/>
-                </a>
+                <MdOutlineLink className='text-xl'/>
                 </div>
+                </a>
+                <a href={data.CodeLink} target='_blank'>
+                <div className='bg-[#292524] p-3 rounded-full text-white hover:text-primary duration-150'>
+                <PiGithubLogoBold className='text-xl'/>
+                </div>
+                </a>
             </div>
             </div>
     

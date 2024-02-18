@@ -7,7 +7,7 @@ import { Each } from '@/components/Each';
 import Image from 'next/legacy/image';
 import ContactForm from "@/components/contact/ContactForm";
 
-const page = () => {
+const Page = () => {
 
     let text = "Let's Work Together.".split("");
 
@@ -70,4 +70,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

@@ -62,8 +62,11 @@ const Hero = () => {
            transition={{duration:1}}
            className="opacity-0"
             >
+              <a href="/files/resume.pdf" download={"resume.pdf"}>
           <Button variant={"secondary"} className="flex items-center gap-1">
              <span>Download CV</span> <FiDownload className="mb-1"/></Button>
+             </a>
+
              </motion.div>
         </div>
        <SocialShare/>

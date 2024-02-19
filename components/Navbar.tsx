@@ -20,7 +20,7 @@ const Navbar = () => {
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(true);
-  const [shadow, setShadow] = useState(false);
+  const [active, setActive] = useState(false);
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
@@ -28,11 +28,11 @@ const Navbar = () => {
  
       if (scrollYProgress.get() < 0.05) {
         setVisible(false);
-        setShadow(true);
+        setActive(true);
       }
       if (scrollYProgress.get() == 0) {
         setVisible(true);
-        setShadow(false);
+        setActive(false);
       }
        else {
         if (direction < 0) {
@@ -80,7 +80,7 @@ const Navbar = () => {
   transition={{
     duration: 0.2,
   }}
-   className={`sticky top-0 bg-background z-50 ${shadow && "dark:border-b shadow"} `}>
+   className={`sticky top-0 bg-background z-50 ${active && "border-b"} `}>
     <div className='relative max-width padd-x py-4 flex justify-between items-center'>
     <div className='text-2xl font-bold'>
      <span className="bg-gradient-to-r from-primary to-yellow-500 bg-clip-text text-transparent">UmerAziz</span>

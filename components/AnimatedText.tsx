@@ -9,7 +9,7 @@ const AnimatedText = () => {
   return (
     <>
    
-       <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide text-center md:text-left">
+       <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide text-center md:text-left ">
         <Each of={Sentence} render={(letter,index) =>
         <motion.span
         whileHover={{ transform:[
@@ -65,7 +65,7 @@ const AnimatedText = () => {
           },
           opacity:[0,1]
        }}
-           className='inline-block text-primary opacity-0'>{letter === " " ? "\u00A0" : letter}</motion.span> 
+           className='inline-block text-primary  opacity-0'>{letter === " " ? "\u00A0" : letter}</motion.span> 
         }/>
             </h1>
     </>

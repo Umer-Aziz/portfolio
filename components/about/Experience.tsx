@@ -66,6 +66,7 @@ const Experience = () => {
                          <motion.div 
                           whileInView={{opacity:[0,1],scale:[0.5,1.5,1]}}
                           transition={{duration:0.5}}
+                          viewport={{once:true}}
                          className='absolute top-full md:left-1/2 -ml-1 md:-ml-5 lg:-ml-6 w-10 h-10 lg:w-12 lg:h-12 bg-secondary rounded-full grid place-content-center'>
                                         <GiSandsOfTime className='text-primary text-2xl lg:text-3xl' />
                                     </motion.div>
@@ -75,8 +76,9 @@ const Experience = () => {
                                 <div className='relative'>
                                     {/* Timeline card content */}
                                     <motion.div
-                                     whileInView={{opacity:[0,1],translateX:[-70,30,0]}}
+                                     whileInView={index % 2 === 1 ? {opacity:[0,1],translateX:[70,-30,0]}:{opacity:[0,1],translateX:[-70,30,0]}}
                                      transition={{duration:0.7}}
+                                     viewport={{once:true}}
                                      className={`relative bg-secondary rounded ml-6 md:ml-0 p-6 w-full md:w-[43%] lg:w-[44%] xl:w-[45%] bg-opacity-85 ${index % 2 === 1 &&  "md:float-right"}`}>
                                         <h2 className='uppercase text-xl font-medium'>{item.title}</h2>
                                         <h3 className='text-primary font-medium capitalize'>{item.subtitle}</h3>
@@ -95,13 +97,15 @@ const Experience = () => {
                                     <motion.div 
                                     whileInView={{opacity:[0,1],scale:[0.5,1.5,1]}}
                                     transition={{duration:0.7}}
+                                    viewport={{once:true}}
                                     className='absolute shadow top-4 -left-4 md:top-5 md:left-1/2 -ml-5 lg:-ml-6 w-10 h-10 lg:w-12 lg:h-12 bg-secondary rounded-full grid place-content-center'>
                                         <item.icon className='text-primary text-2xl lg:text-3xl' />
                                     </motion.div>
 
                                     <motion.div
-                                     whileInView={{opacity:[0,1],translateX:[50,-20,0]}}
+                                     whileInView={ index %2 === 1 ? {opacity:[0,1],translateX:[-50,20,0]} : {opacity:[0,1],translateX:[50,-20,0]}}
                                      transition={{duration:0.7}}
+                                     viewport={{once:true}}
                                      className={`md:absolute md:top-7 ${index % 2 === 1 ? "mt-4 md:mt-0 md:right-[55%]":"mt-4 md:mt-0 md:left-[55%]"}`}>
                                         <p className='text-xl font-medium uppercase'>{item.date}</p>
                                     </motion.div>

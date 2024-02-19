@@ -3,7 +3,12 @@ import React,{useState} from 'react'
 import { ModeToggle } from './modeToggle'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { motion } from 'framer-motion' ;
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
 import { Button } from './ui/button'
 import { Each } from './Each'
 const Navbar = () => {
@@ -11,6 +16,33 @@ const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(true);
   const toggleMenu = () => setIsOpen((prev) => !prev);
+
+  const { scrollYProgress } = useScroll();
+
+  const [visible, setVisible] = useState(true);
+  const [shadow, setShadow] = useState(false);
+  useMotionValueEvent(scrollYProgress, "change", (current) => {
+    // Check if current is not undefined and is a number
+    if (typeof current === "number") {
+      let direction = current! - scrollYProgress.getPrevious()!;
+ 
+      if (scrollYProgress.get() < 0.05) {
+        setVisible(false);
+        setShadow(true);
+      }
+      if (scrollYProgress.get() == 0) {
+        setVisible(true);
+        setShadow(false);
+      }
+       else {
+        if (direction < 0) {
+          setVisible(true);
+        } else {
+          setVisible(false);
+        }
+      }
+    }
+  });
   const navItems = [
     {
       link:"/",
@@ -35,7 +67,20 @@ const Navbar = () => {
   ]
   return (
    <>
-   <nav>
+    <AnimatePresence mode="wait">
+   <motion.nav 
+   initial={{
+    opacity: 1,
+    y: -100,
+  }}
+  animate={{
+    y: visible ? 0 : -100,
+    opacity: visible ? 1 : 0,
+  }}
+  transition={{
+    duration: 0.2,
+  }}
+   className={`sticky top-0 bg-background z-50 ${shadow && "dark:border-b shadow"} `}>
     <div className='relative max-width padd-x py-4 flex justify-between items-center'>
     <div className='text-2xl font-bold'>
      <span className="bg-gradient-to-r from-primary to-yellow-500 bg-clip-text text-transparent">UmerAziz</span>
@@ -83,7 +128,8 @@ const Navbar = () => {
     </div>
     </div>
     </div>
-   </nav>
+   </motion.nav>
+   </AnimatePresence>
    </>
   )
 }

@@ -38,8 +38,7 @@ const Navbar = () => {
    <nav>
     <div className='relative max-width padd-x py-4 flex justify-between items-center'>
     <div className='text-2xl font-bold'>
-     <span className="text-primary">Umer</span>
-     <span className="text-yellow-400">Aziz</span>
+     <span className="bg-gradient-to-r from-primary to-yellow-500 bg-clip-text text-transparent">UmerAziz</span>
     </div>
     <div className='flex items-center gap-12 lg:gap-16'>
       

@@ -28,7 +28,7 @@ const About = () => {
         </div>
 
         <div className='w-full md:w-2/4'>
-            <h3 className='text-2xl xl:text-3xl uppercase font-medium'>
+            <h3 className='text-xl lg:text-2xl xl:text-3xl uppercase font-medium'>
                 <Each of={text} render={(letter,index)=>
                  <motion.span
               whileInView={{ transform:[

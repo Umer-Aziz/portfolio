@@ -73,7 +73,7 @@ const Hero = () => {
         </div>
         <div className="w-full flex justify-center">
       {/* Render the Spline Viewer component */}
-     <div>
+     <div className="-z-10">
       <Spline
       scene="https://prod.spline.design/acrmXt2ReTonUgDF/scene.splinecode"  />
      </div>

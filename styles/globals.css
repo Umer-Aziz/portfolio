@@ -120,7 +120,7 @@ html::-webkit-scrollbar-thumb{
     @apply absolute top-0 -left-full min-h-screen w-4/6 bg-secondary flex flex-col items-center gap-8 pt-20 md:hidden;
   }
   nav ul li {
-    @apply lg:font-medium relative capitalize;
+    @apply font-medium relative capitalize;
   }
   
   nav ul li::after {

@@ -30,7 +30,7 @@ const SocialShare = () => {
           <motion.a 
           whileInView={{opacity:[0,1],scale:[0.5,1.3,1]}}
           transition={{duration:1,delay:0.3 + index * 0.1}}
-          // viewport={{once:true}}
+          viewport={{once:true}}
           href={item.path} target='_blank' className="opacity-0"><item.icon className="hover:text-primary hover:scale-110 duration-200"/></motion.a>
           }/>    
         </div>

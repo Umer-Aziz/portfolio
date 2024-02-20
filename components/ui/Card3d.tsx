@@ -87,6 +87,7 @@ const Card3d: React.FC = () => {
             transformStyle: "preserve-3d"
           }}
           whileInView={{ opacity: [0, 1], translateX: [-50, 0], translateY: [-50, 0], transition: { duration: 0.5, delay: index * 0.2 } }}
+          viewport={{once:true}}
           className="cursor-grab relative h-96 w-full rounded-xl bg-gradient-to-br from-primary dark:to-secondary to-gray-800"
         >
           <div

@@ -83,7 +83,9 @@ const Navbar = () => {
    className={`sticky top-0 bg-background z-50 ${active && "border-b"} `}>
     <div className='relative max-width padd-x py-4 flex justify-between items-center'>
     <div className='text-2xl font-bold'>
+      <Link href={"/"}>
      <span className="bg-gradient-to-r from-primary to-yellow-500 bg-clip-text text-transparent">UmerAziz</span>
+     </Link>
     </div>
     <div className='flex items-center gap-12 lg:gap-16'>
       

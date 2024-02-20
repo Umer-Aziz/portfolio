@@ -24,12 +24,15 @@ const handleInputBlur = () => {
 };
   return (
     <>
-     <form action="">
+     <form action="https://getform.io/f/penLElb7" method='POST'>
             <div className='flex flex-col gap-y-4 md:gap-y-6 xl:gapy-8'>
                 <div className='relative'>
                     <Input
                         type="text"
                         placeholder="Name"
+                        name='name'
+                        minLength={4}
+                        required
                         onFocus={() => handleInputFocus('name')}
                         onBlur={handleInputBlur}
                     />
@@ -39,6 +42,9 @@ const handleInputBlur = () => {
                     <Input 
                         type="email" 
                         placeholder="Email"
+                        name='email'
+                        minLength={8}
+                        required
                         onFocus={() => handleInputFocus('email')}
                         onBlur={handleInputBlur}
                     />
@@ -47,12 +53,16 @@ const handleInputBlur = () => {
                 <div className='relative'>
                     <Textarea 
                         placeholder="Type your message here." 
+                        name='message'
+                        minLength={4}
+                        required
                         className='min-h-40 resize-none' 
                         onFocus={() => handleInputFocus('message')}
                         onBlur={handleInputBlur}
                     />
                     <FiMessageSquare className={`absolute top-3 text-lg right-3 z-50 bg-background ${focusedInput === 'message' ? 'text-primary' : ''}`} />
                 </div>
+                <input type="hidden" name="_gotcha" className='!hidden'/> 
                 <div>
                     <Button type='submit' className='flex items-center gap-1 group'><span>Let's Talk</span> <TiArrowRight className='text-xl group-hover:-rotate-45 duration-200 -translate-y-[1px]'/></Button>
                 </div>

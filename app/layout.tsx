@@ -11,17 +11,17 @@ function generateMetadata(): Metadata {
   
   return {
     metadataBase: new URL('https://umeraziz.vercel.app/'),
-    title: "Umer Aziz | Web Developer & Software Engineer | Mirpur, Azad Kashmir, Pakistan",
+    title: "Umer Aziz | Web Developer & Software Engineer",
     description: "Explore the projects and services of Umer Aziz, a skilled web developer and software engineer based in Mirpur, Azad Kashmir, Pakistan.",
     keywords: "Umer Aziz, web developer, software engineer, Mirpur, Azad Kashmir, Pakistan, web development services, portfolio, projects",
     openGraph: {
-      title: "Umer Aziz | Web Developer & Software Engineer | Mirpur, Azad Kashmir, Pakistan",
+      title: "Umer Aziz | Web Developer & Software Engineer",
       description: "Explore the projects and services of Umer Aziz, a skilled web developer and software engineer based in Mirpur, Azad Kashmir, Pakistan.",
       type: "website",
       images: `/pic.jpg`,
     },
     twitter: {
-      title: "Umer Aziz | Web Developer & Software Engineer | Mirpur, Azad Kashmir, Pakistan",
+      title: "Umer Aziz | Web Developer & Software Engineer",
       description: "Explore the projects and services of Umer Aziz, a skilled web developer and software engineer based in Mirpur, Azad Kashmir, Pakistan.",
       card: "summary_large_image",
       images: `/pic.jpg`,
